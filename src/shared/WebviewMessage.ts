@@ -1,5 +1,4 @@
 import { ApiConfiguration } from "./api"
-import { AutoApprovalSettings } from "./AutoApprovalSettings"
 import { BrowserSettings } from "./BrowserSettings"
 import { ChatSettings } from "./ChatSettings"
 import { UserInfo } from "./UserInfo"
@@ -14,53 +13,35 @@ export interface WebviewMessage {
 		| "newTask"
 		| "condense"
 		| "reportBug"
-		| "didShowAnnouncement"
 		| "openInBrowser"
-		| "openMention"
 		| "showChatView"
-		| "refreshClineRules"
 		| "openMcpSettings"
-		| "autoApprovalSettings"
-		| "browserRelaunchResult"
 		| "openExtensionSettings"
 		| "requestVsCodeLmModels"
-		| "toggleToolAutoApprove"
 		| "showAccountViewClicked"
 		| "authStateChanged"
 		| "authCallback"
 		| "fetchMcpMarketplace"
-		| "silentlyRefreshMcpMarketplace"
 		| "searchCommits"
 		| "fetchLatestMcpServersFromHub"
 		| "telemetrySetting"
-		| "openSettings"
 		| "invoke"
 		| "updateSettings"
 		| "clearAllTaskHistory"
 		| "fetchUserCreditsData"
 		| "optionsResponse"
 		| "requestTotalTasksSize"
-		| "relaunchChromeDebugMode"
-		| "scrollToSettings"
 		| "searchFiles"
 		| "grpc_request"
 		| "grpc_request_cancel"
-		| "toggleClineRule"
-		| "toggleCursorRule"
-		| "toggleWindsurfRule"
 		| "toggleWorkflow"
-		| "deleteClineRule"
-		| "updateTerminalConnectionTimeout"
-		| "setActiveQuote"
 
-	// | "relaunchChromeDebugMode"
 	text?: string
 	disabled?: boolean
 	apiConfiguration?: ApiConfiguration
 	images?: string[]
 	bool?: boolean
 	number?: number
-	autoApprovalSettings?: AutoApprovalSettings
 	browserSettings?: BrowserSettings
 	chatSettings?: ChatSettings
 	chatContent?: ChatContent
